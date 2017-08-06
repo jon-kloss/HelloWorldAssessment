@@ -6,41 +6,41 @@
 			    		<h2 class="panel-title">Register!</h2>
 			 			</div>
 			 			<div class="panel-body">
-			    		<form role="form">
+			    		<form role="form" (submit)= "register()">
 			    			<div class="row">
 			    				<div class="col-xs-6 col-sm-6 col-md-6">
 			    					<div class="form-group">
-			                <input type="text" name="first_name" id="first_name" class="form-control input-sm" placeholder="First Name">
+			                <input type="text" [(ngModel)]= "firstName" name="firstName" id="firstName" class="form-control input-sm" placeholder="First Name">
 			    					</div>
 			    				</div>
 			    				<div class="col-xs-6 col-sm-6 col-md-6">
 			    					<div class="form-group">
-			    						<input type="text" name="last_name" id="last_name" class="form-control input-sm" placeholder="Last Name">
+			    						<input type="text" [(ngModel)]= "lastName" name="lastName" id="lastName" class="form-control input-sm" placeholder="Last Name">
 			    					</div>
 			    				</div>
 			    				<div class="col-xs-6 col-sm-6 col-md-6">
 			    					<div class="form-group">
-			    						<input type="text" name="last_name" id="last_name" class="form-control input-sm" placeholder="address1">
+			    						<input type="text" [(ngModel)]= "address1" name="address1" id="address1" class="form-control input-sm" placeholder="address1">
 			    					</div>
 			    				</div><div class="col-xs-6 col-sm-6 col-md-6">
 			    					<div class="form-group">
-			    						<input type="text" name="last_name" id="last_name" class="form-control input-sm" placeholder="Address2">
+			    						<input type="text" [(ngModel)]= "address2" name="address2" id="address2" class="form-control input-sm" placeholder="Address2">
 			    					</div>
 			    				</div><div class="col-xs-6 col-sm-6 col-md-6">
 			    					<div class="form-group">
-			    						<input type="text" name="last_name" id="last_name" class="form-control input-sm" placeholder="City">
+			    						<input type="text" [(ngModel)]= "city" name="city" id="city" class="form-control input-sm" placeholder="City">
 			    					</div>
 			    				</div><div class="col-xs-6 col-sm-6 col-md-6">
 			    					<div class="form-group">
-			    						<input type="text" name="last_name" id="last_name" class="form-control input-sm" placeholder="State">
+			    						<input type="text" [(ngModel)]= "state" name="state" id="state" class="form-control input-sm" placeholder="State">
 			    					</div>
 			    				</div><div class="col-xs-6 col-sm-6 col-md-6">
 			    					<div class="form-group">
-			    						<input type="text" name="last_name" id="last_name" class="form-control input-sm" placeholder="Zip">
+			    						<input type="text" [(ngModel)]= "zip" name="zip" id="zip" class="form-control input-sm" placeholder="Zip">
 			    					</div>
 			    				</div><div class="col-xs-6 col-sm-6 col-md-6">
 			    					<div class="form-group">
-			    						<input type="text" name="last_name" id="last_name" class="form-control input-sm" placeholder="Country">
+			    						<input type="text" [(ngModel)]= "country" name="country" id="country" class="form-control input-sm" placeholder="Country">
 			    					</div>
 			    				</div>
 			    			</div>
