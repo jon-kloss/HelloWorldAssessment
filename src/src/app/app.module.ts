@@ -9,6 +9,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { RegisterComponent } from './components/register/register.component';
 import { AdminReportComponent } from './components/admin-report/admin-report.component';
 import { ConfirmationComponent } from './components/confirmation/confirmation.component';
+import {ValidateService } from './services/validate.service';
 
 const appRoutes: Routes = [
     {path: "register", component: RegisterComponent},
@@ -31,7 +32,7 @@ const appRoutes: Routes = [
     HttpModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [],
+  providers: [ValidateService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
