@@ -21,8 +21,8 @@ export class ValidateService {
 
   }
   validateZip(userZip)
-  {	var regPostalCode = new RegExp("^\\d{5}(-\\d{4})?$");
-  	console.log(regPostalCode.test(userZip));
+  {	
+  	var regPostalCode = new RegExp("^\\d{5}(-\\d{4})?$");
   		return regPostalCode.test(userZip);
   }
 }

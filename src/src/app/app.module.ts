@@ -10,6 +10,7 @@ import { RegisterComponent } from './components/register/register.component';
 import { AdminReportComponent } from './components/admin-report/admin-report.component';
 import { ConfirmationComponent } from './components/confirmation/confirmation.component';
 import {ValidateService } from './services/validate.service';
+import { FlashMessagesModule } from 'angular2-flash-messages'
 
 const appRoutes: Routes = [
     {path: "register", component: RegisterComponent},
@@ -30,7 +31,9 @@ const appRoutes: Routes = [
     BrowserModule,
     FormsModule,
     HttpModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    FlashMessagesModule
+
   ],
   providers: [ValidateService],
   bootstrap: [AppComponent]

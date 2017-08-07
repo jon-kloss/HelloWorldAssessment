@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ValidateService } from '../../services/validate.service';
+import { FlashMessagesService } from 'angular2-flash-messages';
 
 @Component({
   selector: 'app-register',
@@ -17,7 +18,7 @@ export class RegisterComponent implements OnInit {
 	zip: Number;
 	country: String;
 	
-  constructor(private validateService: ValidateService) { }
+  constructor(private validateService: ValidateService, private flashMessage: FlashMessagesService ) { }
 
   ngOnInit() {
   }
@@ -33,21 +34,19 @@ export class RegisterComponent implements OnInit {
 		zip: this.zip,
 		country: this.country
   	}
-  	//var validZip = ("^\\d{5}(-\\d{4})?$").test(userZip);
   	if(!this.validateService.validateFields(user))
   	{
-  		console.log("please fill in all fields.");
+  		this.flashMessage.show("Please fill in all fields." , { cssClass: "alert-danger", timeout: 2000 });
   		return false;
   	}
   	if(!this.validateService.validateCountry(user.country))
   	{
-  		console.log("please enter a valid country");
+  		this.flashMessage.show("Please enter a valid country" , { cssClass: "alert-danger", timeout: 2000 });
   		return false;
   	}
-  	console.log("user zip is before function " + user.zip);
   	if(!this.validateService.validateZip(user.zip))
   	{
-  		console.log("please enter a valid zip code");
+  		this.flashMessage.show("Please enter a valid zip code" , { cssClass: "alert-danger", timeout: 2000 });
   		return false;
   	}
 
