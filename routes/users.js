@@ -4,7 +4,6 @@ const User = require("../models/user");
 
 router.post("/register", function(req, res, next)
 {
-	//res.send("Register");
 	let newUser = new User({
 	firstName: req.body.firstName,
 	lastName: req.body.lastName,
@@ -30,8 +29,10 @@ router.post("/register", function(req, res, next)
 	});
 });
 
-router.get("/adminreport", function(req, res, next){
-	res.send("adminreport");
+router.get("/adminReport", function(req, res, next){
+	User.find(function(err,user){
+		res.json(user);
+	})
 });
 
 module.exports = router;

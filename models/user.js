@@ -45,12 +45,14 @@ module.exports.addUser = function(newUser, callback){
 	newUser.save(callback);
 }
 
-module.exports.getUsersByDateOfRegistration = function(registerDate, callback)
-{
-	const query = {registerDate: registerDate }
-	//User.find().sort({query: -1 }).toArray(function(err, callback));
-	User.findOne(query, callback);
+module.exports.getUsers = function(callback){
+	var sort = { name: -1 }
+	User.collections("database").find().sort(sort).toArray(function(err, result){
+	
+	})
+	
 }
+
 
 
 
